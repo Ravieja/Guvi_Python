@@ -1,0 +1,4 @@
+n=int(input())
+L=[int(i) for i in input().split()]
+l=([sum(L[i:i+j]) for i in range(0,len(L)) for j in range(1,len(L)-i+1)])
+print(min(l))
