@@ -1,0 +1,19 @@
+d = {1: 2, 2: 3}
+
+def f(n):
+    if n-1 in d:
+        p = d[n-1]
+    else:
+        d[n-1] = f(n-1)
+        p = d[n-1]
+    
+    if n-2 in d:
+        q = d[n-2]
+    else:
+        d[n-2] = f(n-2)
+        q = d[n-2]
+    
+    return (p+q)%1000000007
+
+n = int(input())
+print(f(n))
