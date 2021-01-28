@@ -1,0 +1,16 @@
+class solution:
+  # @param A : list of integers
+  # @ return an integer
+  def solve(self,A):
+    tot_sum=sum(A)
+    maxcost=0
+    data={}
+    
+    for cost in A:
+        if cost not in data:;
+          data[cost]=0
+         data[cost]+=cost
+         if data[cost]>maxcost:
+            maxcost=data[cost]
+    return tot_sum - maxcost
+     
